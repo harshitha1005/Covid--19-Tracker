@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p{
+color:white;
+}
+.main
+ {
+ 
+ float:left;
+  width:60%;
+  padding:0 20px;
+
+
+}
+
+
+h{
+align:right;
+}
+
+body{
+background-color:black;
+}
+h1{
+color:green;
+font-size:50px;
+text-align:center;
+background-color:cyan;
+}
+
+h3{
+color:red;
+font-size:35px;
+}
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; 
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+figure
+{
+width:300px;
+float:left;
+}
+* {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container:hover .overlay {
+  opacity: 1;
+}
+
+</style>
+</head>
+<body>
+
+
+<h1>CORONA-HEALTH INFORMATION</h1>
+<img src="https://media.tenor.com/images/49cb6249aeb784805f443392eff94f89/tenor.gif" width="1500" height="500" align="center"/>
+
+ <h3> SYMPTOMS OF COVID-19</h3></br>
+
+
+<img src="https://news.sanfordhealth.org/wp-content/uploads/2020/09/019037-00504-FACEBOOK-COVID-19-SHN-Symptoms-UPDATED-VERSION-1080x1080-1.jpg" width="600" height="320" align="right"/><br/>
+
+
+<p>Fever <br/>
+Coughing<br/>
+Shortness of breath<br/>
+Trouble breathing<br/>
+Fatigue<br/>
+Chills, sometimes with shaking<br/>
+Body aches<br/>
+Headache<br/>
+Sore throat<br/>
+Congestion/runny nose<br/>
+Loss of smell or taste<br/>
+Nausea<br/>
+Diarrhea<br/>
+The virus can lead to pneumonia, respiratory failure, heart problems, liver problems, septic shock, and death. Many COVID-19 complications may be caused by a condition known as cytokine release syndrome or a cytokine storm. This is when an infection triggers your immune system to flood your bloodstream with inflammatory proteins called cytokines. They can kill tissue and damage your organs.
+</p>
+
+<h3>SAFETY MEASURES</h3>
+<div id="h">
+ <script>
+  var v = 0, f = 1,t="STAY HOME.STAY SAFE",color;
+  function a()
+  {
+   if(f==1)
+    v+=5,color="red";
+   else
+    v-=5,color="blue";
+   document.getElementById("h").innerHTML = "<h1 style=\"font-size: "+v+"px ; margin: 0px; color : "+color+"\"><b> "+t+"</b></h1>";
+   if(v==50)
+    f = 0, t="STAY HOME.STAY SAFE";
+   if(v==5)
+    f = 1, t="STAY HOME.STAY SAFE";
+   c();
+  }
+  function c()
+  {
+   setTimeout(a,300);
+  }
+  c();
+ </script>
+</div>
+
+
+
+<div class="container">
+
+     <img src="https://www.safetyandhealthmagazine.com/ext/resources/images/news/concepts/social-distance.jpg?1584560532" alt="error" width="600" height="300"/>
+  <div class="overlay">Maintain Social distance</div>
+</div>
+<img src="https://media.tenor.com/images/12300eb4fdf142fe46fbce62e1b74c0e/tenor.gif" width="500" height="900" align="right"/><br/>
+
+
+
+  <div class="container">
+    <img src="https://p2d7x8x2.stackpathcdn.com/wordpress/wp-content/uploads/2020/06/Hand-sanitizer.jpg" alt="error"  width="600" height="300"/>
+  <div class="overlay">Use hand sanitizers to keep your hands clean</div>
+</div>
+
+
+
+
+  <div class="container">
+    <img src="https://media.istockphoto.com/vectors/cough-in-your-bent-elbow-vector-id1216031939?k=6&m=1216031939&s=170667a&w=0&h=mkscrI3hSP36-pq37AYKkTHBXBbeW-nMSAZgh1l6Ox4=" alt="error" width="600" height="300"/>
+
+  <div class="overlay">Cough or sneeze in bent elbows and not in your hands</div>
+</div>
+
+
+
+
+
+<div class="container">
+    <img src="https://img.timeinc.net/time/daily/2009/0909/wswine_eyes_0928.jpg" alt="error" width="600" height="300"/>
+
+  <div class="overlay">AVOID TOUCHING YOUR NOSE,EYES AND EARS</div>
+</div>
+
+<h3> LOOKING AFTER YOURSELF IN HOME</h3>
+<p >As with other viruses such as colds and flu, taking it easy and looking after yourself are crucial to your recovery. You should:</p>
+<figure>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+
+      <img src="https://post.greatist.com/wp-content/uploads/sites/3/2020/02/306638_2200-1200x628.jpg" style="width:300px;height:200px";/>
+
+    </div>
+    <div class="flip-box-back">
+      <h2>Water</h2>
+      <p>Drink plenty of fluids and water to keep body hydrated</p>
+    </div>
+  </div>
+</div>
+</figure><br/>
+
+  <figure>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+
+  
+   <img src="https://images.theconversation.com/files/334114/original/file-20200511-49558-palxym.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop" style="width:300px;height:200px";/>
+   
+ </div>
+    <div class="flip-box-back">
+      <h2> Medicines</h2>
+      <p>Take over the counter medicines to treat some of the symptoms</p>
+    </div>
+  </div>
+</div>
+</figure>
+
+
+  <figure>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+
+  
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2kUMvxC95Lu85wb4rjzjRsUr8RLDbi2nnzQ&usqp=CAU" style="width:300px;height:200px";/>
+  
+  </div>
+    <div class="flip-box-back">
+      <h2> Rest</h2>
+      <p>You should take rest and isolate yourself if you have any symptoms of corona virus</p>
+    </div>
+  </div>
+</div>
+</figure><br/>
+
+<figure>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+
+<img src="https://www.fashionlady.in/wp-content/uploads/2017/09/benefits-of-honey-lemon-water-1280x720.jpg" style="width:300px;height:200px";/>
+
+    </div>
+    <div class="flip-box-back">
+      <h2> HONEY AND LEMON</h2>
+      <p>Remedies like honey and lemon will help in treating sore throat</p>
+    </div>
+  </div>
+</div>
+</figure><br/>
+
+
+  <figure>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+
+  
+      <img src="https://5.imimg.com/data5/XS/OW/MY-39206/throat-lozenges-500x500.jpg" style="width:300px;height:200px";/>
+  
+  </div>
+    <div class="flip-box-back">
+      <h2> THROAT LOZENGES</h2>
+      <p>It will help in treating sore throat and cough</p>
+    </div>
+  </div>
+</div>
+</figure></br>
+
+<figure>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+
+  
+      <img src="https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/09/ginger-turmeric-spices-roots-1296x728-header-1296x728.jpg?w=1155&h=1528"style="width:300px;height:200px";/>
+  </div>
+    <div class="flip-box-back">
+      <h2> TURMERIC AND GINGER</h2>
+      <p>Herbal remedies like ginger and turmeric will reduce cold</p>
+    
+  </div>
+</div>
+</div>
+</figure><br/>
+</body>
+</html>
+
+
+
+

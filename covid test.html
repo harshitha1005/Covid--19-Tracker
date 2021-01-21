@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.boxed {
+  border: 1px solid green ;
+}
+body{
+background-color:black;
+}
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; 
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+figure
+{
+width:300px;
+float:left;
+}
+h1{
+font-size:50px;
+color:red;
+text-align:center;
+background-color:black;
+}
+h2{
+font-size:40px;
+
+color:green;
+}
+.d{
+font-size:30px;
+}
+.a{
+color:white;
+font-size:30px;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<h1>COVID-19 TEST</h1>
+<img src="https://www.thebeijinger.com/sites/default/files/naso1_0.gif" width="1500" height="400"/>
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>VIRAL TEST</h2>
+    <p class="d">Viral test will only tell if you are infected now.<br/>
+If you test negative,you can still get infected.</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>ANTIBODY TEST</h2>
+    <p class="d">It checks if you were infected with virus before.<br/>
+It could be gone or you could still be contagious. </p>
+
+  </div>
+</div>
+<h2> LAB TESTS</h2>
+<div class="boxed">
+<p class="a">1)SWAB TEST-Swab is used to take sample from nose or throat.</p><br/>
+
+<p class="a">2)TRACHEAL ASPIRATE TEST-Bronchoscope is put into mouth to reach lungs from where sample is collected.</p><br/>
+
+<p class="a">3)BLOOD TEST-Blood sample is taken from vein in the arm.</p><br/>
+</div>
+<figure>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+
+  
+      <img src="https://c.files.bbci.co.uk/13D22/production/_115068118_boots_1920pxl_007.jpg" style="width:300px;height:200px";/>
+  
+  </div>
+    <div class="flip-box-back">
+      <h2> SWAB TEST</h2>
+      <p></p>
+    </div>
+  </div>
+</div>
+</figure>
+<figure>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+
+  
+      <img src="https://blogbusy.com/wp-content/uploads/2020/04/tracheal.png" style="width:300px;height:200px";/>
+  
+  </div>
+    <div class="flip-box-back">
+      <h2> TRACHEAL ASPIRATE TEST</h2>
+      <p></p>
+    </div>
+  </div>
+</div>
+</figure>
+<figure>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+
+  
+      <img src="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprodmigration%2Fweb%2Fbin%2F1f6d03ab-b838-30d9-b27d-51c2da8bf8f0.jpg?crop=780%2C520%2C0%2C0" style="width:300px;height:200px";/>
+  
+  </div>
+    <div class="flip-box-back">
+      <h2>BLOOD TEST </h2>
+      <p></p>
+    </div>
+  </div>
+</div>
+</figure>
+
+
+</body>
+</html>
